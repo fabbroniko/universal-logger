@@ -1,6 +1,9 @@
 package com.fabbroniko;
 
-import com.fabbroniko.adapter.LoggerAdapter;
+import com.fabbroniko.ul.adapter.LoggerAdapter;
+import com.fabbroniko.ul.FormattedLogger;
+import com.fabbroniko.ul.formatter.LogFormatter;
+import com.fabbroniko.ul.level.LogLevel;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

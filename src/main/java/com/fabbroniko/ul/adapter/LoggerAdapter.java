@@ -1,6 +1,6 @@
-package com.fabbroniko.adapter;
+package com.fabbroniko.ul.adapter;
 
-import com.fabbroniko.LogLevel;
+import com.fabbroniko.ul.level.LogLevel;
 
 public interface LoggerAdapter {
 

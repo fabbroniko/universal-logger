@@ -1,4 +1,4 @@
-package com.fabbroniko.supplier;
+package com.fabbroniko.ul.supplier;
 
 import org.json.JSONArray;
 

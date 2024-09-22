@@ -1,4 +1,4 @@
-package com.fabbroniko;
+package com.fabbroniko.ul.formatter;
 
 public interface LogFormatter {
 

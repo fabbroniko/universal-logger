@@ -1,6 +1,7 @@
-package com.fabbroniko.adapter;
+package com.fabbroniko.ul.adapter;
 
-import com.fabbroniko.LogLevel;
+import com.fabbroniko.ul.level.LevelConverter;
+import com.fabbroniko.ul.level.LogLevel;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

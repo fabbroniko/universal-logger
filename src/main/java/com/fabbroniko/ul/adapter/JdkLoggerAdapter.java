@@ -1,6 +1,7 @@
-package com.fabbroniko.adapter;
+package com.fabbroniko.ul.adapter;
 
-import com.fabbroniko.LogLevel;
+import com.fabbroniko.ul.level.LogLevel;
+import com.fabbroniko.ul.level.LevelConverter;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

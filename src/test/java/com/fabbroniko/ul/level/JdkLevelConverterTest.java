@@ -1,6 +1,5 @@
-package com.fabbroniko.adapter;
+package com.fabbroniko.ul.level;
 
-import com.fabbroniko.LogLevel;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

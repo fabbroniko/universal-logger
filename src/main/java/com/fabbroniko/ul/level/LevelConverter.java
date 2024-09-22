@@ -1,6 +1,4 @@
-package com.fabbroniko.adapter;
-
-import com.fabbroniko.LogLevel;
+package com.fabbroniko.ul.level;
 
 public interface LevelConverter<T> {
 

@@ -1,6 +1,8 @@
-package com.fabbroniko;
+package com.fabbroniko.ul;
 
-import com.fabbroniko.adapter.LoggerAdapter;
+import com.fabbroniko.ul.adapter.LoggerAdapter;
+import com.fabbroniko.ul.formatter.LogFormatter;
+import com.fabbroniko.ul.level.LogLevel;
 
 public class FormattedLogger implements Logger {
 

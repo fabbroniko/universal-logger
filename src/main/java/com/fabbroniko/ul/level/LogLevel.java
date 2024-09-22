@@ -1,4 +1,4 @@
-package com.fabbroniko;
+package com.fabbroniko.ul.level;
 
 public enum LogLevel {
 

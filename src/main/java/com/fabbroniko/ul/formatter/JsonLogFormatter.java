@@ -1,8 +1,9 @@
-package com.fabbroniko;
+package com.fabbroniko.ul.formatter;
 
-import com.fabbroniko.supplier.InstantSupplier;
-import com.fabbroniko.supplier.JsonArraySupplier;
-import com.fabbroniko.supplier.JsonObjectSupplier;
+import com.fabbroniko.ul.level.LogLevel;
+import com.fabbroniko.ul.supplier.InstantSupplier;
+import com.fabbroniko.ul.supplier.JsonArraySupplier;
+import com.fabbroniko.ul.supplier.JsonObjectSupplier;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

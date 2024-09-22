@@ -1,4 +1,4 @@
-package com.fabbroniko.supplier;
+package com.fabbroniko.ul.supplier;
 
 import java.time.Instant;
 import java.util.function.Supplier;
