@@ -1,35 +1,12 @@
-# TODO
+# Universal Logger 
 
-## Default JsonLogFormatter
+## Setup
 
-```json
-{
-  "level": "TRACE",
-  "timestamp": "ISO-8601 timestamp",
-  "identifier": "doing_something",
-  "arguments": [
-    "arg1",
-    "arg2"
-  ]
-}
-```
+## Testing
 
-```json
-{
-  "level": "ERROR",
-  "...": "...",
-  "exceptionType": "java.lang.RuntimeException",
-  "message": "exception message"
-}
-```
+## Contributing
 
-```json
-{
-  "level": "ERROR",
-  "...": "...",
-  "exceptionType": "java.lang.RuntimeException",
-  "message": "exception message"
-}
-```
+## License
 
-{"level": "TRACE", "timestamp": "ISO-8601 timestamp", "operation": "doing_something","arguments": ["arg1", "arg2"]}
+The source code for the site is licensed under the MIT license, which you can find in
+the LICENSE.md file.
