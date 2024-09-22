@@ -1,5 +1,6 @@
 package com.fabbroniko.ul.adapter;
 
+import com.fabbroniko.ul.level.JdkLevelConverter;
 import com.fabbroniko.ul.level.LogLevel;
 import com.fabbroniko.ul.level.LevelConverter;
 
@@ -10,6 +11,10 @@ public class JdkLoggerAdapter implements LoggerAdapter {
 
     private final Logger logger;
     private final LevelConverter<Level> levelConverter;
+
+    public JdkLoggerAdapter() {
+        this(Logger.getGlobal(), new JdkLevelConverter());
+    }
 
     public JdkLoggerAdapter(final Logger logger,
                             final LevelConverter<Level> levelConverter) {
