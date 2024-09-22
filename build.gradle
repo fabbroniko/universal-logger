@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.fabbroniko'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.json:json:20240303'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.11.0'
+    testImplementation 'org.mockito:mockito-core:5.12.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.12.0'
+    testImplementation 'org.assertj:assertj-core:3.26.3'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/fabbroniko/universal-logger")
+            credentials {
+                username = project.findProperty("github.username") ?: System.getenv("USERNAME")
+                password = project.findProperty("github.token") ?: System.getenv("TOKEN")
+            }
+        }
+    }
+
+    publications {
+        register("jar", MavenPublication) {
+            from components.java
+        }
+    }
+}
