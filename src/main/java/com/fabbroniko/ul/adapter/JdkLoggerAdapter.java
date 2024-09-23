@@ -13,7 +13,7 @@ public class JdkLoggerAdapter implements LoggerAdapter {
     private final LevelConverter<Level> levelConverter;
 
     public JdkLoggerAdapter() {
-        this(Logger.getGlobal(), new JdkLevelConverter());
+        this(Logger.getLogger(Logger.GLOBAL_LOGGER_NAME), new JdkLevelConverter());
     }
 
     public JdkLoggerAdapter(final Logger logger,

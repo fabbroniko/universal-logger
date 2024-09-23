@@ -18,7 +18,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class FormattedLoggerTest {
 
-    private static final String OPERATION = "operation";
+    private static final String MESSAGE = "message";
     private static final String[] ARGUMENTS = new String[]{"arg1", "arg2"};
     private static final String FORMATTED_MESSAGE = "Formatted message";
 
@@ -33,44 +33,44 @@ class FormattedLoggerTest {
 
     @Test
     void shouldFormatInfoLog() {
-        formattedLogger.info(OPERATION, ARGUMENTS);
+        formattedLogger.info(MESSAGE, ARGUMENTS);
 
-        verify(logFormatter).info(OPERATION, ARGUMENTS);
+        verify(logFormatter).info(MESSAGE, ARGUMENTS);
     }
 
     @Test
     void shouldFormatWarningLog() {
-        formattedLogger.warning(OPERATION, ARGUMENTS);
+        formattedLogger.warning(MESSAGE, ARGUMENTS);
 
-        verify(logFormatter).warning(OPERATION, ARGUMENTS);
+        verify(logFormatter).warning(MESSAGE, ARGUMENTS);
     }
 
     @Test
     void shouldFormatErrorLog() {
-        formattedLogger.error(OPERATION, throwable, ARGUMENTS);
+        formattedLogger.error(MESSAGE, throwable, ARGUMENTS);
 
-        verify(logFormatter).error(OPERATION, throwable, ARGUMENTS);
+        verify(logFormatter).error(MESSAGE, throwable, ARGUMENTS);
     }
 
     @Test
     void shouldFormatFatalLog() {
-        formattedLogger.fatal(OPERATION, throwable, ARGUMENTS);
+        formattedLogger.fatal(MESSAGE, throwable, ARGUMENTS);
 
-        verify(logFormatter).fatal(OPERATION, throwable, ARGUMENTS);
+        verify(logFormatter).fatal(MESSAGE, throwable, ARGUMENTS);
     }
 
     @Test
     void shouldFormatTraceLog() {
-        formattedLogger.trace(OPERATION, ARGUMENTS);
+        formattedLogger.trace(MESSAGE, ARGUMENTS);
 
-        verify(logFormatter).trace(OPERATION, ARGUMENTS);
+        verify(logFormatter).trace(MESSAGE, ARGUMENTS);
     }
 
     @Test
     void shouldDelegateInfoLoggingToAdapter() {
         when(logFormatter.info(anyString(), anyString(), anyString())).thenReturn(FORMATTED_MESSAGE);
 
-        formattedLogger.info(OPERATION, ARGUMENTS);
+        formattedLogger.info(MESSAGE, ARGUMENTS);
 
         verify(loggerAdapter).log(LogLevel.INFO, FORMATTED_MESSAGE);
     }
@@ -79,7 +79,7 @@ class FormattedLoggerTest {
     void shouldDelegateWarningLoggingToAdapter() {
         when(logFormatter.warning(anyString(), anyString(), anyString())).thenReturn(FORMATTED_MESSAGE);
 
-        formattedLogger.warning(OPERATION, ARGUMENTS);
+        formattedLogger.warning(MESSAGE, ARGUMENTS);
 
         verify(loggerAdapter).log(LogLevel.WARNING, FORMATTED_MESSAGE);
     }
@@ -88,7 +88,7 @@ class FormattedLoggerTest {
     void shouldDelegateErrorLoggingToAdapter() {
         when(logFormatter.error(anyString(), any(), anyString(), anyString())).thenReturn(FORMATTED_MESSAGE);
 
-        formattedLogger.error(OPERATION, throwable, ARGUMENTS);
+        formattedLogger.error(MESSAGE, throwable, ARGUMENTS);
 
         verify(loggerAdapter).log(LogLevel.ERROR, FORMATTED_MESSAGE);
     }
@@ -97,7 +97,7 @@ class FormattedLoggerTest {
     void shouldDelegateFatalLoggingToAdapter() {
         when(logFormatter.fatal(anyString(), any(), anyString(), anyString())).thenReturn(FORMATTED_MESSAGE);
 
-        formattedLogger.fatal(OPERATION, throwable, ARGUMENTS);
+        formattedLogger.fatal(MESSAGE, throwable, ARGUMENTS);
 
         verify(loggerAdapter).log(LogLevel.FATAL, FORMATTED_MESSAGE);
     }
@@ -106,7 +106,7 @@ class FormattedLoggerTest {
     void shouldDelegateTraceLoggingToAdapter() {
         when(logFormatter.trace(anyString(), anyString(), anyString())).thenReturn(FORMATTED_MESSAGE);
 
-        formattedLogger.trace(OPERATION, ARGUMENTS);
+        formattedLogger.trace(MESSAGE, ARGUMENTS);
 
         verify(loggerAdapter).log(LogLevel.TRACE, FORMATTED_MESSAGE);
     }
