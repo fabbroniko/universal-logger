@@ -33,8 +33,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/fabbroniko/universal-logger")
             credentials {
-                username = project.findProperty("github.username") ?: System.getenv("USERNAME")
-                password = project.findProperty("github.token.write") ?: System.getenv("TOKEN")
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
             }
         }
     }
