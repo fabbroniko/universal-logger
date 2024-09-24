@@ -43,7 +43,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/fabbroniko/universal-logger")
             credentials {
                 username = System.getenv("USERNAME")
-                password = System.getenv("TOKEN")
+                password = System.getenv("WRITE_TOKEN")
             }
         }
     }
