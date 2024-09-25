@@ -28,5 +28,5 @@ jobs:
         run: ./gradlew publish
         env:
           USERNAME: ${{ secrets.USERNAME }}
-          WRITE_TOKEN: ${{ secrets.TOKEN }}
+          WRITE_TOKEN: ${{ secrets.WRITE_TOKEN }}
           VERSION: ${{ github.ref_name }}
