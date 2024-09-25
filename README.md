@@ -14,7 +14,7 @@ This Java library provides a flexible logging solution that allows client librar
 
 ### Gradle configuration
 
-The package is currently hosted on GitHub Packages, therefore requiring some extra configuration in your `gradle.properties` or `pom.xml`
+The package is currently hosted on GitHub Packages, therefore requiring some extra configuration in your `build.gradle` or `pom.xml`
 
 Firstly define where gradle can find the package.
 
