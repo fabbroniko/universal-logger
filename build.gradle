@@ -44,6 +44,7 @@ publishing {
             credentials {
                 username = System.getenv("USERNAME")
                 password = System.getenv("WRITE_TOKEN")
+                project.logger.lifecycle('@@@@@@@@@@@@@@@ USERNAME: ' + System.getenv("USERNAME"))
             }
         }
     }
